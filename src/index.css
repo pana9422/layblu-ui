@@ -1,13 +1,185 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap);
+:root {
+  --font-size-2xl: 2.4rem;
+  --font-size-xl: 2rem;
+  --font-size-lg: 1.6rem;
+  --font-size-md: 1.4rem;
+  --font-size-sm: 1.2rem;
+  --font-size-xs: 1rem;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  --text-font-family: "Lato", sans-serif;
+  --text-line-height: 1.5;
+  --text-font-size: var(--font-size-md);
+  --text-font-weight: 400;
+  
+  --title-font-family: "Roboto", sans-serif;
+  --title-line-height: 1.2;
+  --title-font-weight: 700;
+
+  --white: #ffffff;
+  --black: #181717;
+  --transparent: transparent;
+
+  --france-50: #eaf4fd;
+  --france-100: #d5e8fa;
+  --france-200: #acd1f5;
+  --france-300: #82bbf1;
+  --france-400: #59a4ec;
+  --france-500: #2f8de7;
+  --france-600: #2a7fd0;
+  --france-700: #2671b9;
+  --france-800: #2163a2;
+  --france-900: #1c558b;
+
+  --france\/20: #2f8de733;
+  --france\/40: #2f8de766;
+  --france\/60: #2f8de799;
+  --france\/80: #2f8de7cc;
+
+  --cyan-50: #ecfeff;
+  --cyan-100: #cffafe;
+  --cyan-200: #a5f3fc;
+  --cyan-300: #67e8f9;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --cyan-600: #0891b2;
+  --cyan-700: #0e7490;
+  --cyan-800: #155e75;
+  --cyan-900: #164e63;
+  --cyan\/20: #06b6d433;
+  --cyan\/40: #06b6d466;
+  --cyan\/60: #06b6d499;
+  --cyan\/80: #06b6d4cc;
+
+  --green-50: #eefaef;
+  --green-100: #ddf4de;
+  --green-200: #bae9bd;
+  --green-300: #98de9d;
+  --green-400: #75d37c;
+  --green-500: #53c85b;
+  --green-600: #4bb452;
+  --green-700: #42a049;
+  --green-800: #3a8c40;
+  --green-900: #327837;
+  --green\/20: #53c85b33;
+  --green\/40: #53c85b66;
+  --green\/60: #53c85b99;
+  --green\/80: #53c85bcc;
+
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber\/20: #f59e0b33;
+  --amber\/40: #f59e0b66;
+  --amber\/60: #f59e0b99;
+  --amber\/80: #f59e0bcc;
+
+  --bermellon-50: #fbefee;
+  --bermellon-100: #f7dedc;
+  --bermellon-200: #f0beba;
+  --bermellon-300: #e89d97;
+  --bermellon-400: #e17d75;
+  --bermellon-500: #d95c52;
+  --bermellon-600: #c3534a;
+  --bermellon-700: #ae4a42;
+  --bermellon-800: #984039;
+  --bermellon-900: #823731;
+  --bermellon\/20: #d95c5233;
+  --bermellon\/40: #d95c5266;
+  --bermellon\/60: #d95c5299;
+  --bermellon\/80: #d95c52cc;
+
+  --neutral-50: #fafafa;
+  --neutral-100: #e8e8e8;
+  --neutral-200: #d2d2d2;
+  --neutral-300: #bbbbbb;
+  --neutral-400: #a5a5a5;
+  --neutral-500: #8e8e8e;
+  --neutral-600: #808080;
+  --neutral-700: #727272;
+  --neutral-800: #636363;
+  --neutral-900: #555555;
+  --neutral\/20: #8e8e8e33;
+  --neutral\/40: #8e8e8e66;
+  --neutral\/60: #8e8e8e99;
+  --neutral\/80: #8e8e8ecc;
+
+  --gray-iron-50: #f0f2f4;
+  --gray-iron-100: #e1e4e8;
+  --gray-iron-200: #c3cad1;
+  --gray-iron-300: #a4afbb;
+  --gray-iron-400: #8695a4;
+  --gray-iron-500: #687a8d;
+  --gray-iron-600: #536271;
+  --gray-iron-700: #3e4955;
+  --gray-iron-800: #343d47;
+  --gray-iron-900: #2a3138;
+  --gray-iron\/20: #90a0ae33;
+  --gray-iron\/40: #90a0ae66;
+  --gray-iron\/60: #90a0ae99;
+  --gray-iron\/80: #90a0aecc;
+
+  --border-radius: 0.6rem;
+  --font-icon: 'FontAwesome';
+  --transition: .3s;
+  --transition-alt: .6s;
+
+}
+@media (min-width: 992px) {
+  :root {
+    --font-size-9xl: 6.8rem;
+    --font-size-8xl: 6.2rem;
+    --font-size-7xl: 5.6rem;
+    --font-size-6xl: 5rem;
+    --font-size-5xl: 4.4rem;
+    --font-size-4xl: 3.8rem;
+    --font-size-3xl: 3.2rem;
+    --font-size-2xl: 2.6rem;
+    --font-size-xl: 2rem;
+    --font-size-lg: 1.8rem;
+    --font-size-md: 1.6rem;
+    --font-size-sm: 1.4rem;
+    --font-size-xs: 1.2rem;
+  }
+}
+*,
+::before,
+::after{
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+body{
+  display: block;
+  margin: 0;
+  height: 100vh;
+  font-size: var(--text-font-size);
+  font-family: var(--text-font-family);
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button{
+  -webkit-tap-highlight-color: transparent;
+}
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--title-font-family);
+}
+#root{
+  height: 100%;
 }

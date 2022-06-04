@@ -1,0 +1,75 @@
+.app {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    grid-template-rows: 6rem 1fr;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.scroll{
+    --bg-track: var(--neutral-400);
+    --bg-thumb: transparent;
+}
+.scroll::-webkit-scrollbar{
+    width: 1rem;
+}
+.scroll::-webkit-scrollbar-button{
+    display: none;
+}
+.scroll::-webkit-scrollbar-track{
+    background-color: var(--bg-thumb);
+}
+.scroll::-webkit-scrollbar-track-piece{
+    background-color: var(--bg-thumb);
+}
+.scroll::-webkit-scrollbar-thumb{
+    background-color: var(--bg-track);
+    cursor: pointer;
+}
+.scroll::-webkit-scrollbar-corner{
+    background-color: var(--bg-thumb);
+}
+.wrapper{
+    grid-column: 2 / 3;
+    grid-row: 2/3;
+    height: 100%;
+    overflow-y:auto;
+    display: grid;
+    grid-template-rows: 6rem 1fr 6rem;
+    gap: 3rem;
+}
+.wrapper__content{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22.5rem, 1fr));
+    grid-template-rows: min-content;
+    gap: 2rem;
+}
+
+.title{
+    color: var(--gray-iron-600);
+}
+@media screen and (min-width: 992px) {
+    .App {
+        grid-template-columns: minmax(6.4rem, min-content) 1fr;
+    }
+    .container {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper__content{
+        grid-template-columns: repeat(auto-fill, minmax(27.5rem, 1fr));
+    }
+}
