@@ -13,26 +13,32 @@ import Components from "./theme/Components";
 import Libraries from "./theme/Libraries";
 import Team from "./theme/Team";
 import NotFound from "./helpers/NotFound";
+import SidebarProvider from "../context/SidebarProvider";
+import SidebarContext from "../context/SidebarContext";
 
 const App = () => {
     return (
-        <div className="app">
-            <Router>
-            <Sidebar />
-            <Navbar />
+        <SidebarProvider>
+            <div className="app">
+                <Router>
+                    <SidebarContext.Consumer>
+                        {context => <Sidebar toggleSidebar={context.open} />}
+                    </SidebarContext.Consumer>
+                    <Navbar />
 
-            <Routes>
-                <Route path="/" element={<Dashboard />} exact />
-                <Route path="/docs" element={<Docs />} />
-                <Route path="/icons" element={<Icons />} />
-                <Route path="/components/:component" element={<Components />} />
-                <Route path="/components/:component/:codeComponent" element={<Code />} />
-                <Route path="/libraries/:library" element={<Libraries />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </Router>
-        </div>
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} exact />
+                        <Route path="/docs" element={<Docs />} />
+                        <Route path="/icons" element={<Icons />} />
+                        <Route path="/components/:component" element={<Components />} />
+                        <Route path="/components/:component/:codeComponent" element={<Code />} />
+                        <Route path="/libraries/:library" element={<Libraries />} />
+                        <Route path="/team" element={<Team />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </Router>
+            </div>
+        </SidebarProvider>
     );
 };
 

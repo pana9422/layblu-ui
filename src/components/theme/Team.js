@@ -1,6 +1,8 @@
 const Team = () => {
     return (
-        <div>Team</div>
+        <div className="wrapper">
+            <div className="wrapper__content container"> Colaboradores </div>
+        </div>
     )
 }
 

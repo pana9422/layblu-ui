@@ -32,11 +32,11 @@ const Item = ({ url, name, icon, dropdown }) => {
                         </span>
                     </button>
                     <ul className="item__dropdown">
-                        {dropdown.map((item, index) => (
-                            <li key={index} className="item__item item__input-search">
-                                <NavLink  className="item__link" to={`${url}/${item.toLowerCase().replaceAll(" ","-")}`}>
+                        {dropdown.map(item => (
+                            <li key={item.id} className="item item__input-search">
+                                <NavLink className="item__link" to={`${url}/${item.name.toLowerCase().replaceAll(" ", "-")}`}>
                                     <span className="item__icon item__icon--line"></span>
-                                    <span className="item__text">{item}</span>
+                                    <span className="item__text">{item.name}</span>
                                 </NavLink>
                             </li>
                         ))}

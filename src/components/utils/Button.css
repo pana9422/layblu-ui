@@ -1,0 +1,27 @@
+.btn {
+    border: 1px solid var(--gray-iron-100);
+    width: 3.6rem;
+    height: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+    transition: background-color var(--transition);
+}
+.btn__solid{
+    background-color: var(--gray-iron-700);
+    color: var(--gray-iron-50);
+}
+.btn__solid:hover {
+    background-color: var(--gray-iron-900);
+}
+.btn__outline{
+    background-color: transparent;
+    color: var(--gray-iron-400);
+}
+.btn__outline:hover{
+    background-color: var(--gray-iron-50);
+}

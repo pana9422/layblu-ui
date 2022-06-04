@@ -59,7 +59,7 @@
     color: var(--gray-iron-600);
 }
 @media screen and (min-width: 992px) {
-    .App {
+    .app {
         grid-template-columns: minmax(6.4rem, min-content) 1fr;
     }
     .container {

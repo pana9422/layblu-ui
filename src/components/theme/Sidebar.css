@@ -116,7 +116,7 @@
     .sidebar{
         left: 0;
         z-index: 150;
-        position: relative;
+        position: fixed;
     }
     .sidebar__overflow{
         display: none;
@@ -125,6 +125,7 @@
     .sidebar .sidebar__input{
         display: none;
     }
+    .sidebar:hover .sidebar__message,
     .sidebar:hover .sidebar__input,
     .sidebar--full .sidebar__message,
     .sidebar--full .sidebar__input{
@@ -132,6 +133,7 @@
     }
 
     .sidebar--full{
+        position: relative;
         transform: translateX(0);
     }
 }

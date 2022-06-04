@@ -1,4 +1,6 @@
 import { faGauge, faBook, faIcons, faCubes, faLayerGroup, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { GROUP_COMPONENT } from "./components";
+import { GROUP_LIBRARY } from "./libraries";
 const SIDEBAR_ITEMS = [
     {
         name: "Dashboard",
@@ -19,45 +21,13 @@ const SIDEBAR_ITEMS = [
         name: "Componentes",
         icon: faCubes,
         url: "/components",
-        dropdown: [
-            "Accordions",
-            "Alerts",
-            "Avatars",
-            "Badges",
-            "Breadcrumbs",
-            "Buttons",
-            "List Groups",
-            "Modals",
-            "Navbars",
-            "Navigations",
-            "Popovers",
-            "Steppers",
-            "Tables",
-            "Tabs",
-            "Tags",
-            "Timeline",
-        ],
+        dropdown: GROUP_COMPONENT,
     },
     {
         name: "Librerias",
         icon: faLayerGroup,
         url: "/libraries",
-        dropdown: [
-            "Monaco Editor",
-            "Count Js",
-            "Charts Js",
-            "DataTables",
-            "DatePicker",
-            "FullCalendar",
-            "Glider Js",
-            "Lightbox",
-            "Moment Js",
-            "jsPDF",
-            "Rater Js",
-            "Sortable Js",
-            "Summernote",
-            "Typed Js",
-        ],
+        dropdown: GROUP_LIBRARY,
     },
     {
         name: "Colaboradores",

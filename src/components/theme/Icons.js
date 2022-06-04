@@ -1,6 +1,8 @@
 const Icons = () => {
     return (
-        <div>Icons</div>
+        <div className="wrapper">
+            <div className="wrapper__content container"> Iconos </div>
+        </div>
     )
 }
 

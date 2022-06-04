@@ -127,23 +127,17 @@
   --gray-iron\/80: #90a0aecc;
 
   --border-radius: 0.6rem;
-  --font-icon: 'FontAwesome';
   --transition: .3s;
   --transition-alt: .6s;
+
+  
 
 }
 @media (min-width: 992px) {
   :root {
-    --font-size-9xl: 6.8rem;
-    --font-size-8xl: 6.2rem;
-    --font-size-7xl: 5.6rem;
-    --font-size-6xl: 5rem;
-    --font-size-5xl: 4.4rem;
-    --font-size-4xl: 3.8rem;
-    --font-size-3xl: 3.2rem;
-    --font-size-2xl: 2.6rem;
-    --font-size-xl: 2rem;
-    --font-size-lg: 1.8rem;
+    --font-size-2xl: 3.2rem;
+    --font-size-xl: 2.4rem;
+    --font-size-lg: 2rem;
     --font-size-md: 1.6rem;
     --font-size-sm: 1.4rem;
     --font-size-xs: 1.2rem;

@@ -2,13 +2,15 @@ import "./Sidebar.css"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import SIDEBAR_ITEMS from "../../data/sidebar";
 import Item from "../utils/Item";
+import SidebarContext from "../../context/SidebarContext";
 
 const Sidebar = () => {
-    const inputSearch = useRef();
+    const { toggle, setToggle } = useContext(SidebarContext)
 
+    const inputSearch = useRef();
     const searchLink = (input) => {
         const searchList = document.querySelectorAll(".item__input-search");
         const message = document.querySelector(".sidebar__message");
@@ -24,9 +26,10 @@ const Sidebar = () => {
             }
         });
     };
+
     return (
         <>
-            <aside className={`sidebar`}>
+            <aside className={`sidebar ${toggle.open ? 'sidebar--full' : ''}`}>
                 <NavLink to="/" className="sidebar__header">
                     <img className="sidebar__image" src="/assets/brand.svg" alt="Logo de LayBlu" />
                     <span className="sidebar__brand">LayBlu UI</span>
@@ -48,7 +51,7 @@ const Sidebar = () => {
                 </ul>
             </aside>
 
-            <div className="sidebar__overflow"></div>
+            <div className="sidebar__overflow" onClick={() => setToggle({open: false})}></div>
         </>
     );
 };

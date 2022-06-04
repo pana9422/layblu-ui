@@ -1,6 +1,8 @@
 const Libraries = () => {
     return (
-        <div>Libraries</div>
+        <div className="wrapper">
+            <div className="wrapper__content container"> Librerias </div>
+        </div>
     )
 }
 
