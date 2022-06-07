@@ -1,6 +1,4 @@
-import DEVS from "./devs"
-
-const GROUP_LIBRARY = [
+export const GROUP_LIBRARY = [
     {
         id: 1,
         name: "Monaco Editor",
@@ -39,8 +37,3 @@ const GROUP_LIBRARY = [
         name: "Typed Js",
     }
 ]
-
-
-export {
-    GROUP_LIBRARY
-}

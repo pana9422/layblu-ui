@@ -4,25 +4,35 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import { useRef, useContext } from "react";
 import SIDEBAR_ITEMS from "../../data/sidebar";
-import Item from "../utils/Item";
 import SidebarContext from "../../context/SidebarContext";
+import Item from "../utils/Item";
 
 const Sidebar = () => {
     const { toggle, setToggle } = useContext(SidebarContext)
 
     const inputSearch = useRef();
+    const message = useRef();
+
     const searchLink = (input) => {
         const searchList = document.querySelectorAll(".item__input-search");
-        const message = document.querySelector(".sidebar__message");
 
+        
         searchList.forEach((el) => {
+            
             if (el.textContent.toLocaleLowerCase().includes(input.toLocaleLowerCase())) {
+                
                 el.classList.remove("item__filter");
-                message.textContent = "";
+                message.current.textContent = "";
+                
+                console.log(searchList.length)
             } else {
-                const searchListFilter = document.querySelectorAll(".item__filter");
-                el.classList.add("item__filter");
-                if (searchList.length === searchListFilter.length) message.textContent = "No hay resultados de busqueda";
+
+                // const searchListFilter = document.querySelectorAll(".item__filter");
+                // el.classList.add("item__filter");
+
+                
+                // if (searchList.length === searchListFilter.length) //message.current.textContent = "No hay resultados de busqueda";
+
             }
         });
     };
@@ -43,7 +53,7 @@ const Sidebar = () => {
                             <input ref={inputSearch} className="sidebar__input" type="search" placeholder="Buscar" 
                                 onChange={() => searchLink(inputSearch.current.value)} />
                         </label>
-                        <span className="sidebar__message"></span>
+                        <span ref={message} className="sidebar__message"></span>
                     </li>
                     {SIDEBAR_ITEMS.map(({ name, icon, url, dropdown }, index) => (
                         <Item key={index} url={url} name={name} icon={icon} dropdown={dropdown} />

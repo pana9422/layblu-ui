@@ -1,11 +1,11 @@
 const DEVS = [
     {
         id: 1,
-        name: "Miguel J Medina",
+        username: "Miguel J Medina",
         avatar: "/assets/devs/miguel-j-medina.jpg"
     },{
         id: 2,
-        name: "Braider Perez",
+        username: "Braider Perez",
         avatar: "/assets/devs/braider-perez.jpg"
     }
 ]

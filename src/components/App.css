@@ -50,7 +50,7 @@
 .wrapper__content{
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22.5rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
     grid-template-rows: min-content;
     gap: 2rem;
 }
@@ -70,6 +70,6 @@
 
 @media screen and (min-width: 1024px) {
     .wrapper__content{
-        grid-template-columns: repeat(auto-fill, minmax(27.5rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
     }
 }

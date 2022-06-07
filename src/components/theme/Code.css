@@ -1,0 +1,15 @@
+.code{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: .3rem;
+    height: 100%;
+    max-height: calc(100vh - 6rem);
+}
+.code__preview{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    height: 100%;
+    width: 100%;
+}

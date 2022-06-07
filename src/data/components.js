@@ -1,10 +1,14 @@
 import DEVS from "./devs"
 
-const GROUP_COMPONENT = [
+const GROUP_TAGS = [
+    ["CSS","HTML"],
+    ["CSS","HTML", "JS"]
+]
+export const GROUP_COMPONENT = [
     {
         id: 1,
         name: "accordions",
-        max_width_item: 450
+        max_width_item: 350
     }, {
         id: 2,
         name: "alerts",
@@ -71,14 +75,11 @@ const GROUP_COMPONENT = [
         max_width_item: 200
     }
 ]
-const GROUP_TAGS = [
-    ["HTML", "CSS"],
-    ["HTML", "CSS", "JavaScript"]
-]
-const LIST_COMPONENTS = [
+export const LIST_COMPONENTS = [
     {
         id: 1,
         name: "Accordion collapsed",
+        path: "accordion-collapsed-1",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[0],
         author: DEVS[1]
@@ -86,13 +87,15 @@ const LIST_COMPONENTS = [
     {
         id: 2,
         name: "Alert info",
-        tags: GROUP_TAGS[1],
+        path: "alert-info-2",
+        tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[1],
         author: DEVS[0]
     },
     {
         id: 3,
         name: "Alert toast",
+        path: "alert-toast-3",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[1],
         author: DEVS[0]
@@ -100,6 +103,7 @@ const LIST_COMPONENTS = [
     {
         id: 4,
         name: "Avatar circle",
+        path: "avatar-circle-4",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[2],
         author: DEVS[0]
@@ -107,6 +111,7 @@ const LIST_COMPONENTS = [
     {
         id: 5,
         name: "Badge",
+        path: "badge-5",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[3],
         author: DEVS[0]
@@ -114,6 +119,7 @@ const LIST_COMPONENTS = [
     {
         id: 6,
         name: "Badge point",
+        path: "badge-point-6",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[3],
         author: DEVS[0]
@@ -121,6 +127,7 @@ const LIST_COMPONENTS = [
     {
         id: 7,
         name: "Breadcrumb",
+        path: "breadcrumb-7",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[4],
         author: DEVS[0]
@@ -128,6 +135,7 @@ const LIST_COMPONENTS = [
     {
         id: 8,
         name: "Button solid",
+        path: "button-solid-8",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[5],
         author: DEVS[1]
@@ -135,6 +143,7 @@ const LIST_COMPONENTS = [
     {
         id: 9,
         name: "Button outline",
+        path: "button-outline-9",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[5],
         author: DEVS[1]
@@ -142,6 +151,7 @@ const LIST_COMPONENTS = [
     {
         id: 10,
         name: "Button ghost",
+        path: "button-ghost-10",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[5],
         author: DEVS[1]
@@ -149,6 +159,7 @@ const LIST_COMPONENTS = [
     {
         id: 11,
         name: "Button dropdown",
+        path: "button-dropdown-11",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[5],
         author: DEVS[1]
@@ -156,6 +167,7 @@ const LIST_COMPONENTS = [
     {
         id: 12,
         name: "Card product",
+        path: "card-product-12",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[6],
         author: DEVS[1]
@@ -163,6 +175,7 @@ const LIST_COMPONENTS = [
     {
         id: 13,
         name: "Card service",
+        path: "card-service-13",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[6],
         author: DEVS[1]
@@ -170,6 +183,7 @@ const LIST_COMPONENTS = [
     {
         id: 14,
         name: "Card user",
+        path: "card-user-14",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[6],
         author: DEVS[1]
@@ -177,6 +191,7 @@ const LIST_COMPONENTS = [
     {
         id: 15,
         name: "Card box",
+        path: "card-box-15",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[6],
         author: DEVS[1]
@@ -184,6 +199,7 @@ const LIST_COMPONENTS = [
     {
         id: 16,
         name: "List articles",
+        path: "list-articles-16",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[7],
         author: DEVS[0]
@@ -191,6 +207,7 @@ const LIST_COMPONENTS = [
     {
         id: 17,
         name: "List items",
+        path: "list-items-17",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[7],
         author: DEVS[0]
@@ -198,6 +215,7 @@ const LIST_COMPONENTS = [
     {
         id: 18,
         name: "Modal",
+        path: "modal-18",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[8],
         author: DEVS[1]
@@ -205,6 +223,7 @@ const LIST_COMPONENTS = [
     {
         id: 19,
         name: "Navbar",
+        path: "navbar-19",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[9],
         author: DEVS[1]
@@ -212,6 +231,7 @@ const LIST_COMPONENTS = [
     {
         id: 20,
         name: "Navigation solid",
+        path: "navigation-solid-20",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[10],
         author: DEVS[1]
@@ -219,6 +239,7 @@ const LIST_COMPONENTS = [
     {
         id: 21,
         name: "Navigation outline",
+        path: "navigation-outline-21",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[10],
         author: DEVS[1]
@@ -226,6 +247,7 @@ const LIST_COMPONENTS = [
     {
         id: 22,
         name: "Navigation link",
+        path: "navigation-link-22",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[10],
         author: DEVS[1]
@@ -233,6 +255,7 @@ const LIST_COMPONENTS = [
     {
         id: 23,
         name: "Popover",
+        path: "popover-23",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[11],
         author: DEVS[1]
@@ -240,6 +263,7 @@ const LIST_COMPONENTS = [
     {
         id: 24,
         name: "Stepper",
+        path: "stepper-24",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[12],
         author: DEVS[1]
@@ -247,6 +271,7 @@ const LIST_COMPONENTS = [
     {
         id: 25,
         name: "Table",
+        path: "table-25",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[13],
         author: DEVS[1]
@@ -254,6 +279,7 @@ const LIST_COMPONENTS = [
     {
         id: 26,
         name: "Tab horizontal",
+        path: "tab-horizontal-26",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[14],
         author: DEVS[1]
@@ -261,6 +287,7 @@ const LIST_COMPONENTS = [
     {
         id: 27,
         name: "Tab vertical",
+        path: "tab-vertical-27",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[14],
         author: DEVS[1]
@@ -268,6 +295,7 @@ const LIST_COMPONENTS = [
     {
         id: 28,
         name: "Tag",
+        path: "tag-28",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[15],
         author: DEVS[0]
@@ -275,13 +303,9 @@ const LIST_COMPONENTS = [
     {
         id: 29,
         name: "Timeline",
+        path: "timeline-29",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[16],
         author: DEVS[1]
     }
 ]
-
-export {
-    LIST_COMPONENTS,
-    GROUP_COMPONENT
-}
