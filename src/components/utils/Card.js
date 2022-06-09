@@ -27,8 +27,8 @@ const Card = ({ avatar, username, tags, link, name, group }) => {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <style>${contentCSS}</style>
             </head>
-            <body style="display: flex; align-items: center; justify-content: center;">
-                <div style="">${contentHTML}</div>
+            <body style="display: flex; justify-content: center; align-items: center;">
+                <div style="width:100%; display:flex; justify-content: center; align-items: center; flex-direction: column; gap: 12px">${contentHTML}</div>
                 <script>${contentJS}</script>
             </body>
             </html>`;

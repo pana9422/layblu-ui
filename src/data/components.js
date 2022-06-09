@@ -14,7 +14,7 @@ export const GROUP_COMPONENT = [
         id: 2,
         name: "alerts",
         max_width_item: 350,
-        min_height_item: 250
+        min_height_item: 350
     }, {
         id: 3,
         name: "Avatars",
@@ -38,8 +38,8 @@ export const GROUP_COMPONENT = [
     }, {
         id: 7,
         name: "Cards",
-        max_width_item: 400,
-        min_height_item: 450
+        max_width_item: 350,
+        min_height_item: 600
     },{
         id: 8,
         name: "List Groups",
