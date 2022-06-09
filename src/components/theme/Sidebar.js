@@ -16,22 +16,20 @@ const Sidebar = () => {
     const searchLink = (input) => {
         const searchList = document.querySelectorAll(".item__input-search");
 
-        
+
         searchList.forEach((el) => {
-            
-            if (el.textContent.toLocaleLowerCase().includes(input.toLocaleLowerCase())) {
-                
+
+            if (el.textContent.toLowerCase().includes(input.toLowerCase())) {
+
                 el.classList.remove("item__filter");
                 message.current.textContent = "";
-                
-                console.log(searchList.length)
+
             } else {
 
-                // const searchListFilter = document.querySelectorAll(".item__filter");
-                // el.classList.add("item__filter");
+                const searchListFilter = document.querySelectorAll(".item__filter");
+                el.classList.add("item__filter");
 
-                
-                // if (searchList.length === searchListFilter.length) //message.current.textContent = "No hay resultados de busqueda";
+                if (searchList.length === searchListFilter.length) message.current.textContent = "No hay resultados de busqueda";
 
             }
         });
@@ -50,7 +48,7 @@ const Sidebar = () => {
                             <span className="sidebar__icon">
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </span>
-                            <input ref={inputSearch} className="sidebar__input" type="search" placeholder="Buscar" 
+                            <input ref={inputSearch} className="sidebar__input" type="search" placeholder="Buscar"
                                 onChange={() => searchLink(inputSearch.current.value)} />
                         </label>
                         <span ref={message} className="sidebar__message"></span>
@@ -61,7 +59,7 @@ const Sidebar = () => {
                 </ul>
             </aside>
 
-            <div className="sidebar__overflow" onClick={() => setToggle({open: false})}></div>
+            <div className="sidebar__overflow" onClick={() => setToggle({ open: false })}></div>
         </>
     );
 };

@@ -1,30 +1,34 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Card.css";
 
-const Card = ({ avatar, username, tags, link, name }) => {
+const Card = ({ avatar, username, tags, link, name, group }) => {
 
     const [contentHTML, setContentHTML] = useState("")
     const [contentCSS, setContentCSS] = useState("")
     const [contentJS, setContentJS] = useState("")
     const [contentPreview, setContentPreview] = useState("")
-
+    const card = useRef()
     useEffect(() => {
         const getFile = (tag, state) => {
             fetch(`https://source-orpin.vercel.app${link}.${tag.toLowerCase()}`)
                 .then(res => res ? res.text() : "")
-                .then(res => state(res));
+                .then(res => state(res))
+                .catch( err => console.log(err))
         }
+        
+        card.current.style.setProperty( "--min-height-row", `${group.min_height_item}px` )
         const template = `
             <!DOCTYPE html>
             <html lang="es">
             <head>
                 <meta charset="UTF-8">
                 <link rel="stylesheet" href="https://source-orpin.vercel.app/components/presets.css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <style>${contentCSS}</style>
             </head>
-            <body style="display: flex; align-items: flex-start; justify-content: center;">
-                <div style="transform: scale(.7); transform-origin: top;">${contentHTML}</div>
+            <body style="display: flex; align-items: center; justify-content: center;">
+                <div style="">${contentHTML}</div>
                 <script>${contentJS}</script>
             </body>
             </html>`;
@@ -39,7 +43,7 @@ const Card = ({ avatar, username, tags, link, name }) => {
 
 
     return (
-        <article className="card">
+        <article ref={card} className="card">
             <header className="card__author">
                 <img className="card__avatar" src={avatar} alt={username} />
                 <span className="card__username">{username}</span>

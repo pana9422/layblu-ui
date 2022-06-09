@@ -10,7 +10,7 @@ const EditorCode = ({ icon, lang, group, setContent, content, file, tag, nameFil
 
     useEffect(() => {
         if (tag) {
-            fetch(`https://source-orpin.vercel.app/components/${group}/${file}`)
+            fetch(`https://source-orpin.vercel.app/components/${group.toLowerCase()}/${file}`)
                 .then((res) => res ? res.text() : false)
                 .then( res => res.replaceAll(`.${nameFile} `, ""))
                 .then((res) => setContent(res));
@@ -28,11 +28,6 @@ const EditorCode = ({ icon, lang, group, setContent, content, file, tag, nameFil
                     <button className="code__button">
                         <FontAwesomeIcon icon={faCopy} />
                         <span className="code__button-text">Copiar</span>
-                    </button>
-                    <button className="code__button">
-                        <FontAwesomeIcon icon={faSave} />
-                        <span className="code__button-text">Guardar</span>
-                        <FontAwesomeIcon icon={faAngleDown} />
                     </button>
                 </div>
             </div>

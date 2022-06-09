@@ -19,14 +19,15 @@ const ListComponents = () => {
         <div className="wrapper">
             <div ref={wrapper} className="wrapper__content container components">
                 {cards.length > 0
-                    ? cards.map(({ id, author, tags, path }) => (
+                    ? cards.map(({ id, author, tags, path, group }) => (
                         <Card
                             key={id}
                             avatar={author.avatar}
                             username={author.username}
                             tags={tags}
                             name={`${path}`}
-                            link={`/components/${component}/${path}`} />
+                            group={group}
+                            link={`/components/${component.toLocaleLowerCase()}/${path}`} />
                     ))
                     : "Cargando..."}
             </div>
