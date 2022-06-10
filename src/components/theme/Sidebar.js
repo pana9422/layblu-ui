@@ -27,6 +27,7 @@ const Sidebar = () => {
             } else {
 
                 const searchListFilter = document.querySelectorAll(".item__filter");
+
                 el.classList.add("item__filter");
 
                 if (searchList.length === searchListFilter.length) message.current.textContent = "No hay resultados de busqueda";

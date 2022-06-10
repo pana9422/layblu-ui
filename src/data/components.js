@@ -18,12 +18,12 @@ export const GROUP_COMPONENT = [
     }, {
         id: 3,
         name: "Avatars",
-        max_width_item: 250,
+        max_width_item: 350,
         min_height_item: 250
     }, {
         id: 4,
         name: "Badges",
-        max_width_item: 250,
+        max_width_item: 300,
         min_height_item: 250
     }, {
         id: 5,
@@ -33,7 +33,7 @@ export const GROUP_COMPONENT = [
     }, {
         id: 6,
         name: "Buttons",
-        max_width_item: 250,
+        max_width_item: 350,
         min_height_item: 250
     }, {
         id: 7,

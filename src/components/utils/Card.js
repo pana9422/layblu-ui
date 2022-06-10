@@ -29,7 +29,13 @@ const Card = ({ avatar, username, tags, link, name, group }) => {
             </head>
             <body style="display: flex; justify-content: center; align-items: center;">
                 <div style="width:100%; display:flex; justify-content: center; align-items: center; flex-direction: column; gap: 12px">${contentHTML}</div>
-                <script>${contentJS}</script>
+                <script>
+                                
+                const $a = document.querySelectorAll("a")
+                $a.forEach( element => element.addEventListener("click", e => e.preventDefault() ))
+
+                ${contentJS}
+                </script>
             </body>
             </html>`;
         tags.forEach(tag => {

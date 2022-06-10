@@ -33,7 +33,12 @@ const Code = () => {
             </head>
             <body style="display: flex; align-items: center; justify-content: center; padding: 3rem">
                 ${contentHTML}
-                <script>${contentJavaScript}</script>
+                <script>
+                const $a = document.querySelectorAll("a")
+                $a.forEach( element => element.addEventListener("click", e => e.preventDefault() ))
+                
+                ${contentJavaScript}
+                </script>
             </body>
             </html>`;
         setContentPreview(template);
