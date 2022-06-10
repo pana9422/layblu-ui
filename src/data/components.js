@@ -182,25 +182,25 @@ export const LIST_COMPONENTS = [
         author: DEVS[1]
     },
     {
-        id: 16,
+        id: 12,
         name: "List articles",
-        path: "list-articles-16",
+        path: "list-articles-12",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[7],
         author: DEVS[0]
     },
     {
-        id: 17,
+        id: 13,
         name: "List items",
-        path: "list-items-17",
+        path: "list-items-13",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[7],
         author: DEVS[0]
     },
     {
-        id: 18,
+        id: 14,
         name: "Modal",
-        path: "modal-18",
+        path: "modal-14",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[8],
         author: DEVS[1]
