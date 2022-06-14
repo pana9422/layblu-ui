@@ -27,7 +27,7 @@ const ListComponents = () => {
                             tags={tags}
                             name={`${path}`}
                             group={group}
-                            link={`/components/${component.toLocaleLowerCase()}/${path}`} />
+                            link={`/components/${component.toLocaleLowerCase()}/${path}.html`} />
                     ))
                     : "Cargando..."}
             </div>

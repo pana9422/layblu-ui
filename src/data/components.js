@@ -10,7 +10,8 @@ export const GROUP_COMPONENT = [
         name: "accordions",
         max_width_item: 350,
         min_height_item: 400
-    }, {
+    }, 
+    {
         id: 2,
         name: "alerts",
         max_width_item: 350,
@@ -43,8 +44,8 @@ export const GROUP_COMPONENT = [
     },{
         id: 8,
         name: "List Groups",
-        max_width_item: 250,
-        min_height_item: 400
+        max_width_item: 350,
+        min_height_item: 450
     },  {
         id: 9,
         name: "Modals",
@@ -53,8 +54,8 @@ export const GROUP_COMPONENT = [
     }, {
         id: 10,
         name: "Navbars",
-        max_width_item: 350,
-        min_height_item: 250
+        max_width_item: 320,
+        min_height_item: 400
     }, {
         id: 11,
         name: "Navigations",
@@ -201,15 +202,15 @@ export const LIST_COMPONENTS = [
         id: 14,
         name: "Modal",
         path: "modal-14",
-        tags: GROUP_TAGS[0],
+        tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[8],
         author: DEVS[1]
     },
     {
-        id: 19,
+        id: 15,
         name: "Navbar",
-        path: "navbar-19",
-        tags: GROUP_TAGS[0],
+        path: "navbar-15",
+        tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[9],
         author: DEVS[1]
     },
