@@ -52,7 +52,7 @@
     left: 2.4rem;
     bottom: 1.2rem;
     overflow: hidden;
-    width: 40%;
+    flex-grow: 1;
 }
 .card__avatar {
     width: 4rem;
@@ -70,8 +70,6 @@
     gap: 0.6rem;
     justify-content: flex-end;
     align-items: center;
-    width: 1fr;
-    flex: 1;
 }
 .card__tech {
     display: flex;

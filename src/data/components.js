@@ -9,7 +9,7 @@ export const GROUP_COMPONENT = [
         id: 1,
         name: "accordions",
         max_width_item: 350,
-        min_height_item: 400
+        min_height_item: 450
     }, 
     {
         id: 2,
@@ -35,7 +35,7 @@ export const GROUP_COMPONENT = [
         id: 6,
         name: "Buttons",
         max_width_item: 350,
-        min_height_item: 250
+        min_height_item: 350
     }, {
         id: 7,
         name: "Cards",
@@ -44,18 +44,18 @@ export const GROUP_COMPONENT = [
     },{
         id: 8,
         name: "List Groups",
-        max_width_item: 350,
-        min_height_item: 450
+        max_width_item: 300,
+        min_height_item: 500
     },  {
         id: 9,
         name: "Modals",
         max_width_item: 350,
-        min_height_item: 250
+        min_height_item: 450
     }, {
         id: 10,
         name: "Navbars",
-        max_width_item: 320,
-        min_height_item: 400
+        max_width_item: 700,
+        min_height_item: 500
     }, {
         id: 11,
         name: "Navigations",
