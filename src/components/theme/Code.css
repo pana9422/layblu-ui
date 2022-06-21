@@ -1,15 +1,36 @@
 .code{
     grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: .3rem;
-    height: 100%;
+    display: flex;
     max-height: calc(100vh - 6rem);
+    overflow: hidden;
+}
+.code__editor{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .code__preview{
+    flex: 1;
     grid-column: 2 / 3;
     grid-row: 1 / 4;
     height: 100%;
     width: 100%;
+}
+.code__resizerH,
+.code__resizerV {
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.code__resizerV {
+  width: 1rem;
+  cursor: col-resize;
+}
+
+
+.code__resizerH {
+  height: 7px;
+  min-height: 7px;
+  cursor: row-resize;
 }

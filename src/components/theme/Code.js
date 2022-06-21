@@ -1,56 +1,97 @@
+import "./Code.css";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { faHtml5, faCss3, faJs } from "@fortawesome/free-brands-svg-icons";
 
-import "./Code.css";
 import EditorCode from "../utils/EditorCode";
+import { useSearchFile } from "../../hooks/useFetch";
 import { LIST_COMPONENTS } from "../../data/components";
 
 const Code = () => {
-    const replaceStr = (str) => str.toLowerCase().replaceAll(" ", "-")
+    const { component } = useParams()
+    const { code } = useParams()
+    const { tags } = LIST_COMPONENTS.filter(({ path }) => path === code)[0]
+    const { html, css, js, preview } = useSearchFile(`/components/${component.toLocaleLowerCase()}/${code}`, tags)
 
-    const { codeComponent } = useParams();
-    const { tags, group } = LIST_COMPONENTS.filter( el => replaceStr(`${el.name} ${el.id}`) === codeComponent)[0]
+    const controller = new AbortController()
+    const { signal } = controller
 
-    const [contentHTML, setContentHTML] = useState("");
-    const [contentCSS, setContentCSS] = useState("");
-    const [contentJavaScript, setContentJavaScript] = useState("");
-    const [contentPreview, setContentPreview] = useState("");
-    
+    const handlerMouseDownVertical = (e) => {
 
-    useEffect(() => {
+        const $prevEditorCode = e.target.previousElementSibling
+        const $nextEditorCode = e.target.nextElementSibling
 
-        const template = `
-            <!DOCTYPE html>
-            <html lang="es">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-                <link rel="stylesheet" href="https://source-orpin.vercel.app/components/presets.css" />
-                <style>${contentCSS}</style>
-            </head>
-            <body style="display: flex; align-items: center; justify-content: center; padding: 3rem">
-                ${contentHTML}
-                <script>
-                const $a = document.querySelectorAll("a")
-                $a.forEach( element => element.addEventListener("click", e => e.preventDefault() ))
-                
-                ${contentJavaScript}
-                </script>
-            </body>
-            </html>`;
-        setContentPreview(template);
-    }, [contentCSS, contentHTML, contentJavaScript]);
+        let heightPrevEditorCode = parseInt(window.getComputedStyle($prevEditorCode).height);
+        let heightNextEditorCode = parseInt(window.getComputedStyle($nextEditorCode).height);
+        
+        $prevEditorCode.style.height || $prevEditorCode.style.setProperty('height', `${heightPrevEditorCode}px`)
+        $nextEditorCode.style.height || $nextEditorCode.style.setProperty('height', `${heightNextEditorCode}px`)
 
+        const handlerMouseMove = (event) => {
+            let prevHeightResizer = event.clientY - e.clientY
+            let nextHeightResizer = e.clientY - event.clientY
+
+            $prevEditorCode.style.setProperty('height', `${(prevHeightResizer + heightPrevEditorCode)}px`)
+            $nextEditorCode.style.setProperty('height', `${(nextHeightResizer + heightNextEditorCode)}px`)
+
+        }
+
+        document.addEventListener('mousemove', handlerMouseMove, { signal })
+
+        document.addEventListener('mouseup', (e) => {
+            controller.abort()
+        }, { signal })
+    }
+
+    const handlerMouseDownHorizontal = (e) => {
+
+        const $prevEditorCode = e.target.previousElementSibling
+        const $nextEditorCode = e.target.nextElementSibling
+
+        let widthPrevEditorCode = parseInt(window.getComputedStyle($prevEditorCode).width);
+        let widthNextEditorCode = parseInt(window.getComputedStyle($nextEditorCode).width);
+        
+        $prevEditorCode.style.width || $prevEditorCode.style.setProperty('width', `${widthPrevEditorCode}px`)
+        $nextEditorCode.style.width || $nextEditorCode.style.setProperty('width', `${widthNextEditorCode}px`)
+
+        const handlerMouseMove = (event) => {
+            let prevWidthResizer = event.clientX - e.clientX
+            let nextWidthResizer = e.clientX - event.clientX
+
+            console.log(widthPrevEditorCode + prevWidthResizer)
+
+            $prevEditorCode.style.setProperty('width', `${(widthPrevEditorCode + prevWidthResizer)}px`)
+            $nextEditorCode.style.setProperty('width', `${(widthNextEditorCode + nextWidthResizer)}px`)
+
+        }
+
+        document.addEventListener('mousemove', handlerMouseMove, { signal })
+
+        document.addEventListener('mouseup', (e) => {
+            controller.abort()
+        }, { signal })
+    }
     return (
         <div className="code">
-            <EditorCode nameFile={codeComponent} file={`${codeComponent}.html`} group={ group.name} icon={faHtml5} lang="HTML" setContent={setContentHTML} content={contentHTML} tag={ tags.includes("HTML")} />
-            <EditorCode nameFile={codeComponent} file={`${codeComponent}.css`} group={ group.name} icon={faCss3} lang="CSS" setContent={setContentCSS} content={contentCSS} tag={ tags.includes("CSS")} />
-            <EditorCode nameFile={codeComponent} file={`${codeComponent}.js`} group={ group.name} icon={faJs} lang="JavaScript" setContent={setContentJavaScript} content={contentJavaScript} tag={ tags.includes("JS")} />
 
-            <iframe className="code__preview" title={codeComponent} srcDoc={contentPreview} />
+            <div className="code__editor">
+                <EditorCode content={html?.contentHTML} setContent={html?.setContentHTML} icon={faHtml5} lang="HTML" />
+
+                <div className="code__resizerH" onMouseDown={handlerMouseDownVertical}></div>
+
+                <EditorCode content={css?.contentCSS} setContent={css?.setContentCSS} icon={faCss3} lang="CSS" />
+
+                <div className="code__resizerH" onMouseDown={handlerMouseDownVertical}></div>
+
+                <EditorCode content={js?.contentJS} setContent={js?.setContentJS} icon={faJs} lang="JavaScript" />
+
+            </div>
+
+            <div className="code__resizerV" onMouseDown={handlerMouseDownHorizontal}></div>
+
+            <iframe className="code__preview" title={code} srcDoc={preview} />
+
         </div>
     );
 };

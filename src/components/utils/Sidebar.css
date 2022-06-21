@@ -107,10 +107,7 @@
     height: 100%;
     font-size: 1.6rem;
 }
-.sidebar__message{
-    color: var(--gray-iron-500);
-    white-space: nowrap;
-}
+
 
 @media screen and (min-width: 992px) {
     .sidebar{
@@ -121,13 +118,10 @@
     .sidebar__overflow{
         display: none;
     }
-    .sidebar .sidebar__message,
     .sidebar .sidebar__input{
         display: none;
     }
-    .sidebar:hover .sidebar__message,
     .sidebar:hover .sidebar__input,
-    .sidebar--full .sidebar__message,
     .sidebar--full .sidebar__input{
         display: flex;
     }

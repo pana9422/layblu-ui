@@ -2,39 +2,39 @@ import "./Item.css"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const Item = ({ url, name, icon, dropdown }) => {
-    const buttonDropdown = useRef();
+const Item = ({ name, url, icon, dropdown }) => {
 
-    const toggleDropdown = (ref) => {
-        const str = ref.current.getAttribute("data-open");
-        ref.current.setAttribute("data-open", str === "show" ? "hidden" : "show");
-    };
+    const [toggleDropdown, setToggleDropdown] = useState(false)
+    const $buttonDropdown = useRef()
+
+    useEffect(() => {
+        if (dropdown) {
+            $buttonDropdown.current.setAttribute("data-open", toggleDropdown)
+        }
+    }, [toggleDropdown, dropdown])
+
+
     return (
-        <li className="item item__input-search">
+        <li className={`item `}>
             {dropdown ? (
                 <>
                     <button
-                        ref={buttonDropdown}
+                        ref={$buttonDropdown}
                         className="item__link item__link--dropdown"
-                        data-open="hidden"
-                        onClick={() => {
-                            toggleDropdown(buttonDropdown);
-                        }}
+                        data-open={false}
+                        onClick={() => setToggleDropdown(!toggleDropdown)}
                     >
-                        <span className="item__icon">
-                            <FontAwesomeIcon icon={icon} />
-                        </span>
+                        <span className="item__icon"> <FontAwesomeIcon icon={icon} /> </span>
                         <span className="item__text">{name}</span>
-                        <span className="item__caret">
-                            <FontAwesomeIcon icon={faAngleDown} />
-                        </span>
+                        <span className="item__caret"> <FontAwesomeIcon icon={faAngleDown} /> </span>
+                        
                     </button>
                     <ul className="item__dropdown">
                         {dropdown.map(item => (
-                            <li key={item.id} className="item item__input-search">
-                                <NavLink className="item__link" to={`${url}/${item.name.toLowerCase().replaceAll(" ", "-")}`}>
+                            <li key={item.slug} className={`item ${name}`}>
+                                <NavLink className="item__link" to={`${url}/${item.slug}`}>
                                     <span className="item__icon item__icon--line"></span>
                                     <span className="item__text">{item.name}</span>
                                 </NavLink>

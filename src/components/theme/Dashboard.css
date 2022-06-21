@@ -1,0 +1,25 @@
+.dashboard__column-1,
+.dashboard__column-2,
+.dashboard__column-4 {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 568px) {
+    .dashboard__column-4{    
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .dashboard__column-1{
+        grid-template-columns: 1fr;
+    }
+    .dashboard__column-2{
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+    .dashboard__column-4{    
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

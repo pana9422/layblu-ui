@@ -1,33 +1,21 @@
 import "./EditorCode.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSave, faAngleDown, faCopy } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 import Editor from "@monaco-editor/react";
-import { useEffect } from "react";
-const EditorCode = ({ icon, lang, group, setContent, content, file, tag, nameFile }) => {
-
-
-
-    useEffect(() => {
-        if (tag) {
-            fetch(`https://source-orpin.vercel.app/components/${group.toLowerCase()}/${file}`)
-                .then((res) => res ? res.text() : false)
-                .then( res => res.replaceAll(`.${nameFile} `, ""))
-                .then((res) => setContent(res));
-        }
-        
-    }, [])
+const EditorCode = ({ icon, lang, setContent, content }) => {
 
     return (
-        <code className="code__editor">
-            <div className="code__tab">
-                <span className="code__title">
-                    <FontAwesomeIcon className={`code__icon-${lang.toLowerCase()}`} icon={icon} /> {lang}
+        <code className="editor-code">
+            <div className="editor-code__tab">
+                <span className="editor-code__title">
+                    <FontAwesomeIcon className={`editor-code__icon-${lang.toLowerCase()}`} icon={icon} /> 
+                    {lang}
                 </span>
-                <div className="code__actions">
-                    <button className="code__button">
+                <div className="editor-code__actions">
+                    <button className="editor-code__button">
                         <FontAwesomeIcon icon={faCopy} />
-                        <span className="code__button-text">Copiar</span>
+                        <span className="editor-code__button-text">Copiar</span>
                     </button>
                 </div>
             </div>

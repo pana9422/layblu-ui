@@ -1,20 +1,18 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Card.css";
 import { useSearchFile } from "../../hooks/useFetch";
 
-const Card = ({ avatar, username, tags, link, name, group }) => {
+const Card = ({ avatar, username, tags, link, group }) => {
     const card = useRef()
-    const [preview, setPreview] = useState("")
 
-    const { data } = useSearchFile(`https://source-orpin.vercel.app${link}`)
+    const { min_height_item } = group
+    const {preview } = useSearchFile(link, tags)       
+
 
     useEffect(() => {
-        card.current.style.setProperty("--min-height-row", `${group.min_height_item}px`)
-
-        if (data) setPreview(data)
-
-    }, [data])
+        card.current.style.setProperty("--min-height-row", `${min_height_item}px`)
+    }, [min_height_item])
 
 
 

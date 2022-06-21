@@ -1,0 +1,78 @@
+.card-box {
+    width: 100%;
+    min-height: 15rem;
+    font-size: 1.6rem;
+    border-radius: .6rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.card-box--color-france{
+    background-color: #2f7ed8;
+    border: .1rem solid #2f7ed8;
+    color: #d8e5f5;
+}
+.card-box--color-france .card-box__logo{
+    background-color: #1f6bc2;
+}
+.card-box--color-amber{
+    background-color: #f1c637;
+    border: .1rem solid #f1c637;
+    color: #614718;
+}
+.card-box--color-amber .card-box__logo{
+    background-color: #c7a122;
+}
+.card-box--color-bermellon{
+    background-color: #d95c52;
+    border: .1rem solid #d95c52;
+    color: #f7dddc;
+}
+.card-box--color-bermellon .card-box__logo{
+    background-color: #a73f38;
+}
+.card-box--color-esmerald{
+    background-color: #32a86d;
+    border: .1rem solid #32a86d;
+    color: #e5fdf1;
+}
+.card-box--color-esmerald .card-box__logo{
+    background-color: #1d8652;
+}
+.card-box__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card-box__logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    fill: currentColor;
+    padding: 1rem;
+}
+.card-box__info {
+    text-align: right;
+}
+.card-box .card__footer {
+    margin-top: 24px;
+}
+.card-box__money{
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+.card-box__txt {
+    display: block;
+}
+@media screen and (min-width: 992px) {
+    .card-box__logo {
+        width: 50px;
+        height: 50px;
+    }
+}

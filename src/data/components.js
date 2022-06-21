@@ -1,97 +1,84 @@
 import DEVS from "./devs"
 
 const GROUP_TAGS = [
-    ["CSS","HTML"],
-    ["CSS","HTML", "JS"]
+    ["HTML", "CSS"],
+    ["HTML", "CSS", "JS"]
 ]
 export const GROUP_COMPONENT = [
     {
-        id: 1,
-        name: "accordions",
+        name: "Accordions",
+        slug: "accordions",
         max_width_item: 350,
-        min_height_item: 450
+        min_height_item: 500
     }, 
     {
-        id: 2,
-        name: "alerts",
-        max_width_item: 350,
-        min_height_item: 350
+        name: "Alerts",
+        slug: "alerts",
+        max_width_item: 400,
+        min_height_item: 300
     }, {
-        id: 3,
         name: "Avatars",
+        slug: "avatars",
         max_width_item: 350,
-        min_height_item: 250
+        min_height_item: 300
     }, {
-        id: 4,
         name: "Badges",
+        slug: "badges",
         max_width_item: 300,
-        min_height_item: 250
+        min_height_item: 300
     }, {
-        id: 5,
         name: "Breadcrumbs",
-        max_width_item: 350,
-        min_height_item: 250
+        slug: "breadcrumbs",
+        max_width_item: 400,
+        min_height_item: 300
     }, {
-        id: 6,
         name: "Buttons",
+        slug: "buttons",
         max_width_item: 350,
         min_height_item: 350
     }, {
-        id: 7,
         name: "Cards",
+        slug: "cards",
         max_width_item: 350,
-        min_height_item: 600
+        min_height_item: 650
     },{
-        id: 8,
         name: "List Groups",
-        max_width_item: 300,
-        min_height_item: 500
-    },  {
-        id: 9,
-        name: "Modals",
+        slug: "list-groups",
         max_width_item: 350,
+        min_height_item: 550
+    },  {
+        name: "Modals",
+        slug: "modals",
+        max_width_item: 450,
         min_height_item: 450
     }, {
-        id: 10,
         name: "Navbars",
+        slug: "navbars",
         max_width_item: 700,
-        min_height_item: 500
-    }, {
-        id: 11,
-        name: "Navigations",
-        max_width_item: 350,
-        min_height_item: 250
-    }, {
-        id: 12,
-        name: "Popovers",
-        max_width_item: 350,
-        min_height_item: 350
-    }, {
-        id: 13,
-        name: "Steppers",
-        max_width_item: 350,
-        min_height_item: 250
-    }, {
-        id: 14,
-        name: "Tables",
-        max_width_item: 350,
-        min_height_item: 350
-    }, {
-        id: 15,
-        name: "Tabs",
-        max_width_item:350,
-        min_height_item: 400
-    }, {
-        id: 16,
-        name: "Tags",
-        max_width_item: 250,
-        min_height_item: 250
-    }, {
-        id: 17,
-        name: "Timeline",
-        max_width_item: 350,
-        min_height_item: 400
+        min_height_item: 600
     }
+    //  {
+    //     name: "Navigations",
+    //     max_width_item: 350
+    // }, {
+    //     name: "Popovers",
+    //     max_width_item: 350
+    // }, {
+    //     name: "Steppers",
+    //     max_width_item: 350
+    // }, {
+    //     name: "Tables",
+    //     max_width_item: 350
+    // }, {
+    //     name: "Tabs",
+    //     max_width_item:350
+    // }, {
+    //     name: "Tags",
+    //     max_width_item: 250
+    // }, {
+    //     name: "Timeline",
+    //     max_width_item: 350
+    // }
 ]
 export const LIST_COMPONENTS = [
     {
@@ -212,86 +199,87 @@ export const LIST_COMPONENTS = [
         path: "navbar-15",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[9],
-        author: DEVS[1]
-    },
-    {
-        id: 20,
-        name: "Navigation solid",
-        path: "navigation-solid-20",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[10],
-        author: DEVS[1]
-    },
-    {
-        id: 21,
-        name: "Navigation outline",
-        path: "navigation-outline-21",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[10],
-        author: DEVS[1]
-    },
-    {
-        id: 22,
-        name: "Navigation link",
-        path: "navigation-link-22",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[10],
-        author: DEVS[1]
-    },
-    {
-        id: 23,
-        name: "Popover",
-        path: "popover-23",
-        tags: GROUP_TAGS[1],
-        group: GROUP_COMPONENT[11],
-        author: DEVS[1]
-    },
-    {
-        id: 24,
-        name: "Stepper",
-        path: "stepper-24",
-        tags: GROUP_TAGS[1],
-        group: GROUP_COMPONENT[12],
-        author: DEVS[1]
-    },
-    {
-        id: 25,
-        name: "Table",
-        path: "table-25",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[13],
-        author: DEVS[1]
-    },
-    {
-        id: 26,
-        name: "Tab horizontal",
-        path: "tab-horizontal-26",
-        tags: GROUP_TAGS[1],
-        group: GROUP_COMPONENT[14],
-        author: DEVS[1]
-    },
-    {
-        id: 27,
-        name: "Tab vertical",
-        path: "tab-vertical-27",
-        tags: GROUP_TAGS[1],
-        group: GROUP_COMPONENT[14],
-        author: DEVS[1]
-    },
-    {
-        id: 28,
-        name: "Tag",
-        path: "tag-28",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[15],
         author: DEVS[0]
-    },
-    {
-        id: 29,
-        name: "Timeline",
-        path: "timeline-29",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[16],
-        author: DEVS[1]
     }
+    // ,
+    // {
+    //     id: 20,
+    //     name: "Navigation solid",
+    //     path: "navigation-solid-20",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[10],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 21,
+    //     name: "Navigation outline",
+    //     path: "navigation-outline-21",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[10],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 22,
+    //     name: "Navigation link",
+    //     path: "navigation-link-22",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[10],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 23,
+    //     name: "Popover",
+    //     path: "popover-23",
+    //     tags: GROUP_TAGS[1],
+    //     group: GROUP_COMPONENT[11],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 24,
+    //     name: "Stepper",
+    //     path: "stepper-24",
+    //     tags: GROUP_TAGS[1],
+    //     group: GROUP_COMPONENT[12],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 25,
+    //     name: "Table",
+    //     path: "table-25",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[13],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 26,
+    //     name: "Tab horizontal",
+    //     path: "tab-horizontal-26",
+    //     tags: GROUP_TAGS[1],
+    //     group: GROUP_COMPONENT[14],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 27,
+    //     name: "Tab vertical",
+    //     path: "tab-vertical-27",
+    //     tags: GROUP_TAGS[1],
+    //     group: GROUP_COMPONENT[14],
+    //     author: DEVS[1]
+    // },
+    // {
+    //     id: 28,
+    //     name: "Tag",
+    //     path: "tag-28",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[15],
+    //     author: DEVS[0]
+    // },
+    // {
+    //     id: 29,
+    //     name: "Timeline",
+    //     path: "timeline-29",
+    //     tags: GROUP_TAGS[0],
+    //     group: GROUP_COMPONENT[16],
+    //     author: DEVS[1]
+    // }
 ]
