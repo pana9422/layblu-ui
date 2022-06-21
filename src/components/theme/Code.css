@@ -31,10 +31,12 @@
 }
 
 .code__resizerV {
+  min-width: 1rem;
   width: 1rem;
   cursor: col-resize;
 }
 .code__resizerH {
+  min-height: 1rem;
   height: 1rem;
   cursor: row-resize;
 }
