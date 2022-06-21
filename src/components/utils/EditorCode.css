@@ -55,3 +55,8 @@
     display: flex;
     gap: 0.6rem;
 }
+
+.editor-code__state {
+  display: flex;
+  align-items: center;
+}
