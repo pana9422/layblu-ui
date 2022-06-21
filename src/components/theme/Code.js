@@ -14,26 +14,31 @@ const Code = () => {
     const { tags } = LIST_COMPONENTS.filter(({ path }) => path === code)[0]
     const { html, css, js, preview } = useSearchFile(`/components/${component.toLocaleLowerCase()}/${code}`, tags)
 
-    const controller = new AbortController()
-    const { signal } = controller
 
     const handlerMouseDownVertical = (e) => {
+        const controller = new AbortController()
+        const { signal } = controller
 
         const $prevEditorCode = e.target.previousElementSibling
         const $nextEditorCode = e.target.nextElementSibling
 
+        const setHeight = (element, value) => element.style.setProperty('height', value)
+        
+        $prevEditorCode.style.setProperty('min-height', `40px`)
+
         let heightPrevEditorCode = parseInt(window.getComputedStyle($prevEditorCode).height);
         let heightNextEditorCode = parseInt(window.getComputedStyle($nextEditorCode).height);
-        
-        $prevEditorCode.style.height || $prevEditorCode.style.setProperty('height', `${heightPrevEditorCode}px`)
-        $nextEditorCode.style.height || $nextEditorCode.style.setProperty('height', `${heightNextEditorCode}px`)
+
+
+        $prevEditorCode.style.height || setHeight($prevEditorCode, `${heightPrevEditorCode}px`)
+        $prevEditorCode.style.height || setHeight($nextEditorCode, `${heightNextEditorCode}px`)
 
         const handlerMouseMove = (event) => {
-            let prevHeightResizer = event.clientY - e.clientY
-            let nextHeightResizer = e.clientY - event.clientY
+            let prevHeightResizer = event.clientY - e.clientY + heightPrevEditorCode
+            let nextHeightResizer = e.clientY - event.clientY + heightNextEditorCode
 
-            $prevEditorCode.style.setProperty('height', `${(prevHeightResizer + heightPrevEditorCode)}px`)
-            $nextEditorCode.style.setProperty('height', `${(nextHeightResizer + heightNextEditorCode)}px`)
+            setHeight($prevEditorCode, `${(prevHeightResizer)}px`)
+            setHeight($nextEditorCode, `${(nextHeightResizer)}px`)
 
         }
 
@@ -46,30 +51,30 @@ const Code = () => {
 
     const handlerMouseDownHorizontal = (e) => {
 
+        const controller = new AbortController()
+        const { signal } = controller
+
         const $prevEditorCode = e.target.previousElementSibling
-        const $nextEditorCode = e.target.nextElementSibling
+        const $nextPreview = e.target.nextElementSibling
 
         let widthPrevEditorCode = parseInt(window.getComputedStyle($prevEditorCode).width);
-        let widthNextEditorCode = parseInt(window.getComputedStyle($nextEditorCode).width);
+        let widthNextPreview = parseInt(window.getComputedStyle($nextPreview).width);
         
-        $prevEditorCode.style.width || $prevEditorCode.style.setProperty('width', `${widthPrevEditorCode}px`)
-        $nextEditorCode.style.width || $nextEditorCode.style.setProperty('width', `${widthNextEditorCode}px`)
+        $nextPreview.style.setProperty('min-width', `320px`)
 
-        const handlerMouseMove = (event) => {
-            let prevWidthResizer = event.clientX - e.clientX
-            let nextWidthResizer = e.clientX - event.clientX
+        $nextPreview.classList.add("code__preview-resize")
+        document.addEventListener('mousemove', (event) => {
+            let prevWidthResizer = event.clientX - e.clientX + widthPrevEditorCode
+            let nextWidthResizer = e.clientX - event.clientX + widthNextPreview
 
-            console.log(widthPrevEditorCode + prevWidthResizer)
+            $prevEditorCode.style.setProperty('width', `${prevWidthResizer}px`)
+            $nextPreview.style.setProperty('width', `${nextWidthResizer}px`)
 
-            $prevEditorCode.style.setProperty('width', `${(widthPrevEditorCode + prevWidthResizer)}px`)
-            $nextEditorCode.style.setProperty('width', `${(widthNextEditorCode + nextWidthResizer)}px`)
+        }, { signal })
 
-        }
-
-        document.addEventListener('mousemove', handlerMouseMove, { signal })
-
-        document.addEventListener('mouseup', (e) => {
+        document.addEventListener('mouseup', () => {
             controller.abort()
+            $nextPreview.classList.remove("code__preview-resize")
         }, { signal })
     }
     return (

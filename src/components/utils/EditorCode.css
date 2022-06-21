@@ -1,16 +1,16 @@
-.editor-code{
+.editor-code {
     display: flex;
     flex-direction: column;
-    gap: .6rem;
+    gap: 0.6rem;
     background-color: #1e1e1e;
-    color:  #aaa;
-    box-shadow: inset 0 -1rem 5px rgba(0,0,0,.1);
+    color: #aaa;
+    box-shadow: inset 0 -1rem 5px rgba(0, 0, 0, 0.1);
     text-align: left;
     overflow: hidden;
-    height: 30%;
+    height: calc(100% / 3);
     width: 100%;
 }
-.editor-code__tab{
+.editor-code__tab {
     display: flex;
     align-items: center;
     background-color: #303030;
@@ -19,39 +19,39 @@
     width: 100%;
     justify-content: space-between;
 }
-.editor-code__title{
-    border-top-left-radius: .6rem;
-    border-top-right-radius: .6rem;
-    padding: .6rem 1.2rem;
+.editor-code__title {
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    padding: 0.6rem 1.2rem;
     display: flex;
     align-items: center;
-    gap: .6rem;
+    gap: 0.6rem;
     background-color: #1e1e1e;
     color: rgb(214, 214, 214);
     font-weight: 900;
     height: 100%;
 }
-.editor-code__icon-html{
+.editor-code__icon-html {
     color: #da5c22;
 }
-.editor-code__icon-css{
+.editor-code__icon-css {
     color: #2278da;
 }
-.editor-code__icon-javascript{
+.editor-code__icon-javascript {
     color: #dad722;
 }
-.editor-code__actions{
+.editor-code__actions {
     display: flex;
-    gap: .6rem;
+    gap: 0.6rem;
     margin-right: 1.2rem;
 }
-.editor-code__button{
+.editor-code__button {
     border: 1px solid #aaa;
-    padding: .6rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     background-color: #1e1e1e;
     color: #ddd;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
     cursor: pointer;
     display: flex;
-    gap: .6rem;
+    gap: 0.6rem;
 }

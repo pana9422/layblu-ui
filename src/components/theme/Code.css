@@ -9,6 +9,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 .code__preview{
     flex: 1;
@@ -16,21 +17,24 @@
     grid-row: 1 / 4;
     height: 100%;
     width: 100%;
+    padding: 2rem;
+    user-select: none;
+    border: 0;
+}
+.code__preview-resize{
+  pointer-events: none;
 }
 .code__resizerH,
 .code__resizerV {
   display: block;
-  background-color: #f0f0f0;
+  background-color: #030303;
 }
 
 .code__resizerV {
   width: 1rem;
   cursor: col-resize;
 }
-
-
 .code__resizerH {
-  height: 7px;
-  min-height: 7px;
+  height: 1rem;
   cursor: row-resize;
 }
