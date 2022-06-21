@@ -10,7 +10,7 @@ const EditorCode = ({ icon, lang, setContent, content }) => {
     
   const [ isCopied, setIsCopied ] = useState(false);
 
-  const copyCode = (codeToCopy) => {
+  const handlerCopyCode = (codeToCopy) => {
     navigator.clipboard.writeText(codeToCopy)
       .then(() => {
         setIsCopied(true);
@@ -28,9 +28,9 @@ const EditorCode = ({ icon, lang, setContent, content }) => {
                 </span>
                 <div className="editor-code__actions">
                     {
-                      isCopied ? <span className="editor-code__state">Copied to clipboad!</span> : ''
+                      isCopied && <span className="editor-code__state">Copied to clipboad!</span>
                     }
-                    <button className="editor-code__button" onClick={() => copyCode(content)}>
+                    <button className="editor-code__button" onClick={() => handlerCopyCode(content)}>
                         <FontAwesomeIcon icon={faCopy} />
                         <span className="editor-code__button-text">Copiar</span>
                     </button>
