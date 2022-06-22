@@ -8,7 +8,6 @@ import Navbar from "./utils/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Code from "./pages/Code";
 import Components from "./pages/Components";
-import Libraries from "./pages/Libraries";
 import Team from "./pages/Team";
 import NotFound from "./helpers/NotFound";
 import SidebarProvider from "../context/SidebarProvider";
@@ -28,7 +27,6 @@ const App = () => {
                         <Route path="/" element={<Dashboard />} exact />
                         <Route path="/components/:component" element={<Components />} />
                         <Route path="/components/:component/:code" element={<Code />} />
-                        <Route path="/libraies/:library" element={<Libraries />} />
                         <Route path="/team" element={<Team />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
