@@ -9,6 +9,7 @@
     overflow: hidden;
     height: calc(100% / 3);
     width: 100%;
+    min-height: 40px;
 }
 .editor-code__tab {
     display: flex;

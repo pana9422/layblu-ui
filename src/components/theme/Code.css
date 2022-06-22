@@ -20,6 +20,7 @@
     padding: 2rem;
     user-select: none;
     border: 0;
+    min-width: 32rem;
 }
 .code__preview-resize{
   pointer-events: none;
