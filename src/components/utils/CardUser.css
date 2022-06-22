@@ -1,0 +1,93 @@
+.card-user {
+    width: 280px;
+    height: auto;
+    font-size: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    color: #6d6767;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    gap: 25px;
+    position: relative;
+}
+.card-user--collaborator::after{
+    position: absolute;
+    content: "Colaborador";
+    top: 0;
+    right: 12px;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 6px 12px;
+    z-index: 100;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.card-user__picture {
+    width: 100%;
+    height: 140px;
+    background-image: url(http://localhost:3000/assets/image/background-300x200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.card-user__country-flag {
+    width: 20px;
+    height: 15px;
+}
+.card-user__avatar {
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 70px;
+    left: 0;
+}
+.card-user__avatar-image {
+    width: 125px;
+    height: 125px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    font-size: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-user__about {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-user__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-user__links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.card-user__link {
+    padding: 6px;
+    color: #6d6767;
+    font-size: 18px;
+    fill: currentColor;
+    text-decoration: none;
+}
+.card-user__description{
+    width: 180px;
+    font-size: var(--font-size-sm);
+    color: #999393;
+    padding: 0;
+    margin: 0;
+}

@@ -13,6 +13,7 @@
     transition: width var(--transition);
     border-right: 1px solid var(--neutral-100);
     z-index: 150;
+    user-select: none;
 }
 .sidebar__overflow{
     position: absolute;
