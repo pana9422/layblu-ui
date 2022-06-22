@@ -12,19 +12,6 @@
     text-align: center;
     padding-bottom: 25px;
     gap: 25px;
-    position: relative;
-}
-.card-user--collaborator::after{
-    position: absolute;
-    content: "Colaborador";
-    top: 0;
-    right: 12px;
-    font-size: 14px;
-    background-color: #fff;
-    padding: 6px 12px;
-    z-index: 100;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
 }
 .card-user__picture {
     width: 100%;

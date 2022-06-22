@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sidebar from "./utils/Sidebar";
 import Navbar from "./utils/Navbar";
 
-import Dashboard from "./theme/Dashboard";
-import Code from "./theme/Code";
-import Components from "./theme/Components";
-import Libraries from "./theme/Libraries";
-import Team from "./theme/Team";
+import Dashboard from "./pages/Dashboard";
+import Code from "./pages/Code";
+import Components from "./pages/Components";
+import Libraries from "./pages/Libraries";
+import Team from "./pages/Team";
 import NotFound from "./helpers/NotFound";
 import SidebarProvider from "../context/SidebarProvider";
 import SidebarContext from "../context/SidebarContext";
