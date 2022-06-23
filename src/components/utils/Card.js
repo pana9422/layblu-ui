@@ -18,7 +18,7 @@ const Card = ({ avatar, username, tags, link, group }) => {
 
     return (
         <article ref={card} className="card">
-            <iframe className="card__component" title="preview" srcDoc={preview} />
+            <iframe className="card__component" title="preview" src={`data:text/html;base64,${preview}`} />
             <footer className="card__footer">
                 <div className="card__author">
                     <img className="card__avatar" src={avatar} alt={username} />

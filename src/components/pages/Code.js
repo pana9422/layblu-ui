@@ -12,13 +12,15 @@ const Code = () => {
     const { tags } = LIST_COMPONENTS.filter(({ path }) => path === code)[0]
     const { html, css, js, preview } = useSearchFile(`/components/${component.toLocaleLowerCase()}/${code}`, tags)
 
-    const handlerResizer = (size, e) => {
+    const getStyle = (element, prop) => window.getComputedStyle(element)[prop]
 
+    const handlerResizer = (size, e) => {
         const controller = new AbortController()
         const { signal } = controller
-        const getStyle = (element, prop) => window.getComputedStyle(element)[prop]
+
         const $prevElement = e.target.previousElementSibling
         const $nextElement = e.target.nextElementSibling
+
         const sizePrevElement = parseFloat(getStyle($prevElement, size));
         const sizeNextElement = parseFloat(getStyle($nextElement, size));
 
@@ -52,7 +54,7 @@ const Code = () => {
                 <EditorCode content={js?.contentJS} setContent={js?.setContentJS} icon={faJs} lang="JavaScript" />
             </div>
             <div className="code__resizerV" onMouseDown={(e) => handlerResizer('width', e)}></div>
-            <iframe className="code__preview" title={code} srcDoc={preview} />
+            <iframe className="code__preview" title={code} src={`data:text/html;base64,${preview}`} />
         </div>
     );
 };

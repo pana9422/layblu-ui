@@ -63,7 +63,7 @@ export const useSearchFile = (url, tags) => {
       html: { contentHTML, setContentHTML },
       css: { contentCSS, setContentCSS },
       js: { contentJS, setContentJS },
-      preview: template
+      preview: window.btoa(template)
     })
 
   }, [contentCSS, contentHTML, contentJS])

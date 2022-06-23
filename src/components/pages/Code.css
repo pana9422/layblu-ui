@@ -28,16 +28,23 @@
 .code__resizerH,
 .code__resizerV {
   display: block;
-  background-color: #030303;
 }
 
 .code__resizerV {
-  min-width: 1rem;
-  width: 1rem;
+  min-width: .1rem;
+  width: .1rem;
+  transform: scaleX(8);
   cursor: col-resize;
+  background-color: #a3a3a3;
 }
 .code__resizerH {
-  min-height: 1rem;
-  height: 1rem;
+  min-height: .1rem;
+  transform: scaleY(2);
+  height: .1rem;
   cursor: row-resize;
+  background-color: transparent;
+}
+.code__resizerH:hover{
+  transform: scaleY(8);
+  background-color: #b8b8b8;
 }
