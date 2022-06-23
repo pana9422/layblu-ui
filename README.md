@@ -1,4 +1,4 @@
-# LayBlu UI
+# LayBlu UI v1.0
 LayBlu UI is a components libraries in HTML, CSS y JavaScript. This project is supported for comunity.
 
 ## Usage
