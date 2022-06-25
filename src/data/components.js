@@ -56,11 +56,11 @@ export const GROUP_COMPONENT = [
         slug: "navbars",
         max_width_item: 700,
         min_height_item: 600
+    }, {
+       name: "Navigations",
+       max_width_item: 350
     }
-    //  {
-    //     name: "Navigations",
-    //     max_width_item: 350
-    // }, {
+    //, {
     //     name: "Popovers",
     //     max_width_item: 350
     // }, {
