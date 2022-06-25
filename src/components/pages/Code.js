@@ -6,6 +6,12 @@ import EditorCode from "../utils/EditorCode";
 import { useSearchFile } from "../../hooks/useFetch";
 import { LIST_COMPONENTS } from "../../data/components";
 
+document.addEventListener('keydown', e => {
+  if(e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+  }
+})
+
 const Code = () => {
     const { component } = useParams()
     const { code } = useParams()
