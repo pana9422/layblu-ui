@@ -1,23 +1,18 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 import "./Card.css";
 import { useSearchFile } from "../../hooks/useFetch";
 
 const Card = ({ avatar, username, tags, link, group }) => {
-    const card = useRef()
-
     const { min_height_item } = group
-    const {preview } = useSearchFile(link, tags)       
 
+    const { preview } = useSearchFile(link, tags)
 
-    useEffect(() => {
-        card.current.style.setProperty("--min-height-row", `${min_height_item}px`)
-    }, [min_height_item])
-
-
+    let styleCard = {
+        minHeight: `${min_height_item}px`
+    }
 
     return (
-        <article ref={card} className="card">
+        <article className="card" style={styleCard}>
             <iframe className="card__component" title="preview" src={`data:text/html;base64,${preview}`} />
             <footer className="card__footer">
                 <div className="card__author">
@@ -25,8 +20,8 @@ const Card = ({ avatar, username, tags, link, group }) => {
                     <span className="card__username">{username}</span>
                 </div>
                 <div className="card__tags">
-                    {tags.map((tag, index) => (
-                        <span key={index} className={`card__tech card__tech--${tag.toLowerCase()}`}>{tag}</span>
+                    {tags.map(tag => (
+                        <span key={tag} className={`card__tech card__tech--${tag.toLowerCase()}`}>{tag}</span>
                     ))}
                     <Link className="card__view" to={link}> Ver codigo </Link>
                 </div>
