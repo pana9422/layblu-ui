@@ -10,7 +10,6 @@ const Card = ({ avatar, username, tags, link, group }) => {
     let styleCard = {
         minHeight: `${min_height_item}px`
     }
-
     return (
         <article className="card" style={styleCard}>
             <iframe className="card__component" title="preview" src={`data:text/html;base64,${preview}`} />

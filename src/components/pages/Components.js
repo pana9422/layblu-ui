@@ -9,6 +9,7 @@ const ListComponents = () => {
     const { max_width_item } = cards[0].group
     let myStyle = {'--max-width-column':`${max_width_item}px`}
 
+
     return (
         <div className="wrapper">
             <div className="wrapper__container-full">

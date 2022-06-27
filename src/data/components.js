@@ -10,7 +10,7 @@ export const GROUP_COMPONENT = [
         slug: "accordions",
         max_width_item: 350,
         min_height_item: 500
-    }, 
+    },
     {
         name: "Alerts",
         slug: "alerts",
@@ -41,12 +41,12 @@ export const GROUP_COMPONENT = [
         slug: "cards",
         max_width_item: 350,
         min_height_item: 650
-    },{
+    }, {
         name: "List Groups",
         slug: "list-groups",
         max_width_item: 350,
         min_height_item: 550
-    },  {
+    }, {
         name: "Modals",
         slug: "modals",
         max_width_item: 450,
@@ -56,29 +56,62 @@ export const GROUP_COMPONENT = [
         slug: "navbars",
         max_width_item: 700,
         min_height_item: 600
-    }
-    //  {
-    //     name: "Navigations",
-    //     max_width_item: 350
-    // }, {
-    //     name: "Popovers",
-    //     max_width_item: 350
-    // }, {
-    //     name: "Steppers",
-    //     max_width_item: 350
-    // }, {
-    //     name: "Tables",
-    //     max_width_item: 350
-    // }, {
-    //     name: "Tabs",
-    //     max_width_item:350
-    // }, {
-    //     name: "Tags",
-    //     max_width_item: 250
-    // }, {
-    //     name: "Timeline",
-    //     max_width_item: 350
-    // }
+    }, {
+        name: "Navigations",
+        slug: "navigations",
+        max_width_item: 350,
+        min_height_item: 350
+    }, {
+        name: "Popovers",
+        slug: "Popovers",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Progress",
+        slug: "progress",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Selects",
+        slug: "selects",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Sliders",
+        slug: "sliders",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Steppers",
+        slug: "steppers",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Radio and Checkbox",
+        slug: "radio-and-checkbox",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Tables",
+        slug: "tables",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Tabs",
+        slug: "tabs",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Tags",
+        slug: "tags",
+        max_width_item: 350,
+        min_height_item: 600
+    }, {
+        name: "Timelines",
+        slug: "timelines",
+        max_width_item: 350,
+        min_height_item: 600
+    },
 ]
 export const LIST_COMPONENTS = [
     {
@@ -200,86 +233,101 @@ export const LIST_COMPONENTS = [
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[9],
         author: DEVS[0]
+    },
+    {
+        id: 16,
+        name: "Navigation",
+        path: "navigation-16",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[10],
+        author: DEVS[1]
+    },
+    {
+        id: 17,
+        name: "Popover",
+        path: "popover-17",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[11],
+        author: DEVS[1]
+    },
+    {
+        id: 18,
+        name: "ProgressBar",
+        path: "progressbar-18",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[12],
+        author: DEVS[1]
+    },
+    {
+        id: 20,
+        name: "Select",
+        path: "select-20",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[13],
+        author: DEVS[1]
+    },
+    {
+        id: 21,
+        name: "Select Floating",
+        path: "select-floating-21",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[13],
+        author: DEVS[1]
+    },
+    {
+        id: 22,
+        name: "Slider",
+        path: "slider-22",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[14],
+        author: DEVS[1]
+    },
+    {
+        id: 23,
+        name: "Stepper",
+        path: "stepper-23",
+        tags: GROUP_TAGS[1],
+        group: GROUP_COMPONENT[15],
+        author: DEVS[1]
+    },
+    {
+        id: 24,
+        name: "Table",
+        path: "table-24",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[16],
+        author: DEVS[1]
+    },
+    {
+        id: 25,
+        name: "Tab horizontal",
+        path: "tab-horizontal-25",
+        tags: GROUP_TAGS[1],
+        group: GROUP_COMPONENT[17],
+        author: DEVS[1]
+    },
+    {
+        id: 26,
+        name: "Tab vertical",
+        path: "tab-vertical-26",
+        tags: GROUP_TAGS[1],
+        group: GROUP_COMPONENT[17],
+        author: DEVS[1]
+    },
+    {
+        id: 27,
+        name: "Tag",
+        path: "tag-27",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[18],
+        author: DEVS[0]
+    },
+    {
+        id: 28,
+        name: "Timeline",
+        path: "timeline-28",
+        tags: GROUP_TAGS[0],
+        group: GROUP_COMPONENT[19],
+        author: DEVS[1]
     }
-    // ,
-    // {
-    //     id: 20,
-    //     name: "Navigation solid",
-    //     path: "navigation-solid-20",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[10],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 21,
-    //     name: "Navigation outline",
-    //     path: "navigation-outline-21",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[10],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 22,
-    //     name: "Navigation link",
-    //     path: "navigation-link-22",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[10],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 23,
-    //     name: "Popover",
-    //     path: "popover-23",
-    //     tags: GROUP_TAGS[1],
-    //     group: GROUP_COMPONENT[11],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 24,
-    //     name: "Stepper",
-    //     path: "stepper-24",
-    //     tags: GROUP_TAGS[1],
-    //     group: GROUP_COMPONENT[12],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 25,
-    //     name: "Table",
-    //     path: "table-25",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[13],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 26,
-    //     name: "Tab horizontal",
-    //     path: "tab-horizontal-26",
-    //     tags: GROUP_TAGS[1],
-    //     group: GROUP_COMPONENT[14],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 27,
-    //     name: "Tab vertical",
-    //     path: "tab-vertical-27",
-    //     tags: GROUP_TAGS[1],
-    //     group: GROUP_COMPONENT[14],
-    //     author: DEVS[1]
-    // },
-    // {
-    //     id: 28,
-    //     name: "Tag",
-    //     path: "tag-28",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[15],
-    //     author: DEVS[0]
-    // },
-    // {
-    //     id: 29,
-    //     name: "Timeline",
-    //     path: "timeline-29",
-    //     tags: GROUP_TAGS[0],
-    //     group: GROUP_COMPONENT[16],
-    //     author: DEVS[1]
-    // }
 ]
