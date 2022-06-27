@@ -111,8 +111,7 @@ export const GROUP_COMPONENT = [
         slug: "timelines",
         max_width_item: 350,
         min_height_item: 600
-    },
-]
+    }]
 export const LIST_COMPONENTS = [
     {
         id: 1,
