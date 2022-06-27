@@ -63,29 +63,29 @@ export const GROUP_COMPONENT = [
         min_height_item: 350
     }, {
         name: "Popovers",
-        slug: "Popovers",
+        slug: "popovers",
         max_width_item: 350,
-        min_height_item: 600
+        min_height_item: 350
     }, {
         name: "Progress",
         slug: "progress",
         max_width_item: 350,
-        min_height_item: 600
+        min_height_item: 250
     }, {
         name: "Selects",
         slug: "selects",
         max_width_item: 350,
-        min_height_item: 600
+        min_height_item: 450
     }, {
         name: "Sliders",
         slug: "sliders",
         max_width_item: 350,
-        min_height_item: 600
+        min_height_item: 300
     }, {
         name: "Steppers",
         slug: "steppers",
-        max_width_item: 350,
-        min_height_item: 600
+        max_width_item: 450,
+        min_height_item: 300
     }, {
         name: "Radio and Checkbox",
         slug: "radio-and-checkbox",
@@ -252,33 +252,33 @@ export const LIST_COMPONENTS = [
     },
     {
         id: 18,
-        name: "ProgressBar",
-        path: "progressbar-18",
-        tags: GROUP_TAGS[0],
+        name: "Progress",
+        path: "progress-18",
+        tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[12],
         author: DEVS[1]
     },
     {
-        id: 20,
+        id: 19,
         name: "Select",
-        path: "select-20",
-        tags: GROUP_TAGS[0],
+        path: "select-19",
+        tags: GROUP_TAGS[1],
+        group: GROUP_COMPONENT[13],
+        author: DEVS[1]
+    },
+    {
+        id: 20,
+        name: "Select Floating",
+        path: "select-floating-20",
+        tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[13],
         author: DEVS[1]
     },
     {
         id: 21,
-        name: "Select Floating",
-        path: "select-floating-21",
-        tags: GROUP_TAGS[0],
-        group: GROUP_COMPONENT[13],
-        author: DEVS[1]
-    },
-    {
-        id: 22,
         name: "Slider",
-        path: "slider-22",
-        tags: GROUP_TAGS[0],
+        path: "slider-21",
+        tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[14],
         author: DEVS[1]
     },
