@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 import "./Card.css";
 import { useSearchFile } from "../../hooks/useFetch";
 
-const Card = ({ avatar, username, tags, link, group }) => {
-    const { min_height_item } = group
-
+const Card = ({ avatar, username, tags, link, min_height }) => {
     const { preview } = useSearchFile(link, tags)
 
     let styleCard = {
-        minHeight: `${min_height_item}px`
+        minHeight: `${min_height}px`
     }
     return (
         <article className="card" style={styleCard}>

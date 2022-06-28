@@ -1,6 +1,5 @@
-import { faGauge,faLayerGroup, faCubes, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faGauge, faCubes, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { GROUP_COMPONENT } from "./components";
-import { GROUP_LIBRARY } from "./libraries";
 const SIDEBAR_ITEMS = [
     {
         name: "Dashboard",
@@ -13,12 +12,6 @@ const SIDEBAR_ITEMS = [
         url: "/components",
         dropdown: GROUP_COMPONENT,
     },
-    // {
-    //     name: "Librerias",
-    //     icon: faLayerGroup,
-    //     url: "/libraries",
-    //     dropdown: GROUP_LIBRARY,
-    // },
     {
         name: "Colaboradores",
         icon: faUsers,
