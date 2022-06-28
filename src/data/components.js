@@ -282,49 +282,49 @@ export const LIST_COMPONENTS = [
         author: DEVS[1]
     },
     {
-        id: 23,
+        id: 22,
         name: "Stepper",
-        path: "stepper-23",
+        path: "stepper-22",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[15],
         author: DEVS[1]
     },
     {
-        id: 24,
+        id: 23,
         name: "Table",
-        path: "table-24",
+        path: "table-23",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[16],
         author: DEVS[1]
     },
     {
-        id: 25,
+        id: 24,
         name: "Tab horizontal",
-        path: "tab-horizontal-25",
+        path: "tab-horizontal-24",
+        tags: GROUP_TAGS[1],
+        group: GROUP_COMPONENT[17],
+        author: DEVS[1]
+    },
+    {
+        id: 25,
+        name: "Tab vertical",
+        path: "tab-vertical-25",
         tags: GROUP_TAGS[1],
         group: GROUP_COMPONENT[17],
         author: DEVS[1]
     },
     {
         id: 26,
-        name: "Tab vertical",
-        path: "tab-vertical-26",
-        tags: GROUP_TAGS[1],
-        group: GROUP_COMPONENT[17],
-        author: DEVS[1]
-    },
-    {
-        id: 27,
         name: "Tag",
-        path: "tag-27",
+        path: "tag-26",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[18],
         author: DEVS[0]
     },
     {
-        id: 28,
+        id: 27,
         name: "Timeline",
-        path: "timeline-28",
+        path: "timeline-27",
         tags: GROUP_TAGS[0],
         group: GROUP_COMPONENT[19],
         author: DEVS[1]
