@@ -46,7 +46,7 @@ export const useSearchFile = (url, tags) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 * { box-sizing: border-box; }
-                body { margin: 0; font-family: sans-serif; font-size: 16px; line-height: 1.5; overflow-x: hidden; width: 100%; display: flex; flex-direction: column; gap: 10px; align-items: center;}
+                body { padding: 24px; margin: 0; font-family: sans-serif; font-size: 16px; line-height: 1.5; overflow-x: hidden; width: 100%; display: flex; flex-direction: column; gap: 10px; align-items: center;}
             </style>
             <style>${contentCSS}</style>
         </head>
