@@ -130,7 +130,7 @@ export const LIST_COMPONENTS = [
         id: 13,
         name: "Input floating",
         path: "input-floating-13",
-        tags: GROUP_TAGS[0],
+        tags: GROUP_TAGS[1],
         group: "inputs",
         author: DEVS[0]
     },
