@@ -12,7 +12,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar__container">
                 <Button icon={faBars} evenClick={ () => setToggle({...toggle, open:!toggle.open}) } />
-                <Button icon={faGithub} link={ { target:"_blank", href:"https://github.com/LB-UI/Componentes-UI"} } />
+                <Button icon={faGithub} link={ { target:"_blank", href:"https://github.com/pana9422/layblu-ui"} } />
             </div>
         </nav>
     )
