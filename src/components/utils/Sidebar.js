@@ -14,6 +14,7 @@ const Sidebar = () => {
     const handlerSearching = ({ target }) => setSearch(target.value)
 
     useEffect(() => {
+        console.log('render')
         const searchList = document.querySelectorAll(".item");
         searchList.forEach(el => {
             el.textContent.toLowerCase().includes(search.toLowerCase())
