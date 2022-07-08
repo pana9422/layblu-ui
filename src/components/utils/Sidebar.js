@@ -12,9 +12,10 @@ const Sidebar = () => {
     const { toggle, setToggle } = useContext(SidebarContext)
     const [search, setSearch] = useState("")
     const handlerSearching = ({ target }) => setSearch(target.value)
-
+    
+    console.log('render')
     useEffect(() => {
-        console.log('render')
+        
         const searchList = document.querySelectorAll(".item");
         searchList.forEach(el => {
             el.textContent.toLowerCase().includes(search.toLowerCase())
