@@ -5600,6 +5600,11 @@
     "import-local" "^3.0.2"
     "jest-cli" "^27.5.1"
 
+"js-base64@^3.7.2":
+  "integrity" "sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ=="
+  "resolved" "https://registry.npmjs.org/js-base64/-/js-base64-3.7.2.tgz"
+  "version" "3.7.2"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"

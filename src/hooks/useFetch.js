@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { encode } from 'js-base64';
+
 export const useSearchFile = (url, tags) => {
 
   const [contentHTML, setContentHTML] = useState("")
@@ -63,7 +65,7 @@ export const useSearchFile = (url, tags) => {
       html: { contentHTML, setContentHTML },
       css: { contentCSS, setContentCSS },
       js: { contentJS, setContentJS },
-      preview: window.btoa(template)
+      preview: encode(template)
     })
 
   }, [contentCSS, contentHTML, contentJS])
